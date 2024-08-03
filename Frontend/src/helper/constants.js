@@ -2,14 +2,6 @@ export const BasicUrl = "http://api-lulu.hibitbyte.com/product/allProducts"
 export const LoginUrl = "http://api-lulu.hibitbyte.com/auth/login"
 export const OneProductUrl = 'http://api-lulu.hibitbyte.com/product'
 
-// Key from Rita
-// export const myKey = "k8U6fyOZKvQaAF3%2BC7ZO6Unl1C%2BHhj4qXDTTT996XcvzoKuCw34uKdZvVj4vgZgrEY0BFioGYssrZAkz7U2Vyg=="
-//Key from Jiayi
-// export const myKey = "Q939jrg88K14nGukig9n4lbfQnHqFARaK1Xw3%2Bt55/pRYjNJrOO6KMxDoEgANJM4R90ZfkhquM%2BmqRhfNPAMsg=="
-// Key from Xin
-// export const myKey = 'KtihUKj%2BtZdh/ZTsbrLDQgstuDmq45oqUqff953LQt%2Bip15rm9zPYUIhyc/%2BntaFKlHmq00rwIFpMJ7dg0rJ6Q=='
-// Key from Xiaoying
-// export const myKey = 'BEizwNRgxejEUo7Ivgn2feDZX/uq%2BpfpJWSxjDsPDxkTJmpl967tJwKgughN42Hv4FoMq2X0izyqGHMsozAk1g=='
 
 //export const myKey = ''
 
