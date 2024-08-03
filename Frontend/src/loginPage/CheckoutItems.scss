@@ -1,0 +1,37 @@
+.checkoutOrderSummaryDetailsContainer {
+  margin: 0 0 16px 0;
+  height: 100px;
+  display: flex;
+
+  .checkoutOrderSummaryDetailsImg {
+    margin: 0;
+    padding: 0 10px 0 0;
+    width: 81px;
+    height: 100px;
+
+    .checkoutOrderSummaryDetailsItemImg {
+      width: 100%;
+    }
+  }
+
+  .checkoutOrderSummaryDetailsInfo {
+    margin: 0;
+    width: 260px;
+    line-height: 125%;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .checkoutOrderSummaryDetailsPrice {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

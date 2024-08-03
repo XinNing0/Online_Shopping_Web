@@ -1,0 +1,122 @@
+* {
+  margin: 0 auto;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #fafafa;
+  color: #000000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Calibre", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+:export {
+  bcOffWhite: #fafafa;
+}
+
+.checkoutContainers {
+  width: 1440px;
+  padding: 0 50px 60px 50px;
+  margin: 0 auto;
+  position: relative;
+}
+.checkoutContainers .checkoutHeader {
+  margin: 24px 0;
+}
+.checkoutContainers .checkoutHeader h1 {
+  text-align: center;
+}
+.checkoutContainers .checkoutBody {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers {
+  width: 771px;
+  margin: 0;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer {
+  width: 721px;
+  margin: 0;
+  padding: 0 25px;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer .checkoutInfoBlock {
+  width: 721px;
+  margin: 0 auto 8px auto;
+  padding: 16px 25px 40px 25px;
+  background-color: #ffffff;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer .checkoutInfoBlock .checkoutInfoHeader {
+  margin: 0 0 8px 0;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer .checkoutInfoBlock .checkoutInfoBody .checkoutInfoLogInContainer {
+  margin: 0;
+  display: flex;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer .checkoutInfoBlock .checkoutInfoBody .checkoutInfoLogInContainer .checkoutInfoLogInBtn {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer .checkoutInfoBlock .checkoutInfoBody .checkoutInfoLogInContainer .checkoutInfoLogInBtn .checkoutInfoLogInBtnInfo {
+  display: flex;
+  align-items: center;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer .checkoutInfoBlock .checkoutInfoBody .checkoutInfoLogInContainer .checkoutInfoLogInBtn .checkoutInfoLogInBtnInfo span {
+  margin: 0;
+  font-size: 14px;
+}
+.checkoutContainers .checkoutBody .checkoutInfoContainers .checkoutInfoContainer .checkoutInfoBlock .checkoutInfoBody .checkoutInfoLogInContainer .checkoutInfoLogInBtn .checkoutInfoLogInBtnInfo span:first-child {
+  font-weight: 500;
+  text-decoration: underline;
+}
+.checkoutContainers .checkoutBody .checkoutOrderSummaryContainers {
+  min-width: 341px;
+  margin: 0;
+  padding: 16px 0 0 0;
+  border: 1px blue solid;
+}
+.checkoutContainers .checkoutModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 106;
+}
+.checkoutContainers .checkoutModal .checkoutModalContainer {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: auto;
+}
+.checkoutContainers .checkoutModal .checkoutModalClose {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 104;
+}
+
+/*# sourceMappingURL=Checkout.css.map */

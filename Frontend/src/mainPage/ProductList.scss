@@ -1,0 +1,44 @@
+// to load pre-defined global styles
+@use '../index.scss' as v;
+
+// For Product Card List
+.productCardListContainer {
+  margin-bottom: 32px;
+  //padding: 0 6px;
+  display: flex;
+  //align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 985px;
+  gap: 23px
+}
+
+.productCardListLoadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+
+  .productCardListLoadingInfo {
+    font-weight: 500;
+  }
+
+  .productCardListLoadingBtn {
+    background-color: v.$bcWhite;
+    border-radius: 5px;
+    outline: none;
+    border: 1px black solid;
+    width: 300px;
+    height: 60px;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+

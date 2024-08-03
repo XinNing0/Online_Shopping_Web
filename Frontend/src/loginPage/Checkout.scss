@@ -1,0 +1,348 @@
+// to load pre-defined global styles
+@use '../index.scss' as v;
+
+// test border
+$borderGrey: #d3d5d7;
+$boxLightGrey: #8d9196;
+$ErrorRed: #d20014;
+$shadow: rgba(83, 86, 90, 0.2);
+$borderRed: 1px red solid;
+$borderBlue: 1px blue solid;
+
+.checkoutContainers {
+  width: 1440px;
+  padding: 0 50px 60px 50px;
+  margin: 0 auto;
+  position: relative;
+
+  .checkoutHeader {
+    margin: 24px 0;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .checkoutBody {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    // Left Section
+    .checkoutInfoContainers {
+      width: 771px;
+      margin: 0;
+
+      .checkoutInfoContainer {
+        width: 721px;
+        margin: 0;
+        padding: 0 25px;
+
+        .checkoutInfoBlock {
+          width: 721px;
+          margin: 0 auto 8px auto;
+          padding: 16px 25px 40px 25px;
+          background-color: v.$bcWhite;
+
+          .checkoutInfoHeader {
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+          }
+
+          .checkoutInfoBody {
+
+            // block - Contact information
+            .checkoutInfoInputContainer {
+              display: flex;
+              flex-direction: column;
+              position: relative;
+
+              .checkoutInfoInputLabel {
+                margin: 0 0 6px 0;
+              }
+
+              .checkoutInfoInputBtn {
+                margin: 0;
+                padding: 14px 16px;
+                border: 1px solid black;
+                border-radius: 4px;
+                height: 52px;
+                font-size: 18px;
+
+                &:focus {
+                  outline: none;
+                }
+
+                &:focus-within {
+                  box-shadow: 0 0 6px rgba(0, 0, 0, 0.45);
+                }
+              }
+
+              .checkoutInfoInputBtnError {
+                margin: 0;
+                padding: 14px 16px;
+                border: 1px solid $ErrorRed;
+                border-radius: 4px;
+                height: 52px;
+                font-size: 18px;
+
+                &:focus {
+                  outline: none;
+                }
+
+                &:focus-within {
+                  box-shadow: 0 0 6px rgba(0, 0, 0, 0.45);
+                }
+              }
+
+              .checkoutInfoInputBtnErrorMark {
+                color: $ErrorRed;
+                position: absolute;
+                right: 17px;
+                bottom: 17px;
+                cursor: text;
+              }
+
+              .checkoutInfoInputValidation {
+                margin: 6px 0 0 0;
+                color: $ErrorRed;
+                font-size: 14px;
+              }
+            }
+
+            .checkoutInfoCheckboxContainer {
+              margin: 10px 0 0 0;
+              display: flex;
+              align-items: baseline;
+              position: relative;
+
+              // to hide the default checkbox and position it to overlap the custom checkbox
+              .checkoutInfoCheckboxInput {
+                position: absolute;
+                opacity: 0;  // hidden but clickable
+                z-index: 1;
+                width: 16px;  // to match the custom checkbox size
+                height: 16px;  // to match the custom checkbox size
+              }
+
+              // to customize a checkbox appearance
+              .reviewsFiltersRatingInputCheckmark {
+                position: absolute;
+                top: 1px;
+                left: 0;
+                margin: 2px 8px 0 0;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $boxLightGrey;
+                color: #0079c1;
+
+                // to customize the checkmark (hidden when not checked)
+                &::before {
+                  content: ' ';
+                  width: 6px;
+                  height: 12px;
+                  display: none;
+                  position: absolute;
+                  left: 4px;
+                  border: solid white;
+                  border-width: 0 2px 2px 0;
+                  transform: rotate(45deg); // adjusted checkmark style
+                }
+              }
+
+              // to custom hover effect when not checked
+              .checkoutInfoCheckboxInput:not(:checked):hover + .reviewsFiltersRatingInputCheckmark {
+                background-color: v.$bcWhite;
+                &::before {
+                  display: block; // to show the checkmark
+                  border: solid black;
+                  border-width: 0 2px 2px 0;
+                }
+              }
+
+              // to style when checked
+              .checkoutInfoCheckboxInput:checked + .reviewsFiltersRatingInputCheckmark {
+                background-color: $boxLightGrey;
+                &:before {
+                  display: block;  // to show the checkmark
+                }
+              }
+
+              // to custom focus effect for accessibility
+              .checkoutInfoCheckboxInput:not([disabled]):focus + .reviewsFiltersRatingInputCheckmark {
+                box-shadow: 0 0 6px rgba(0, 0, 0, .45);
+              }
+
+              .checkoutInfoCheckboxLabel {
+                margin: 0 0 0 25px;
+                line-height: 140%;
+                font-size: 16px;
+                .checkoutInfoCheckboxLabelLink {
+                  color: black;
+                }
+              }
+            }
+
+            // block - have an account
+            .checkoutInfoLogInContainer {
+              margin: 0;
+              display: flex;
+
+              .checkoutInfoLogInBtn {
+                margin: 0;
+                padding: 0;
+                background-color: v.$bcWhite;
+                outline: none;
+                border: none;
+                cursor: pointer;
+
+                .checkoutInfoLogInBtnInfo {
+                  display: flex;
+                  align-items: center;
+
+                  span {
+                    margin: 0;
+                    font-size: 14px;
+                  }
+
+                  span:first-child {
+                    font-weight: 500;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Right Section
+    .checkoutOrderSummaryContainers {
+      width: 341px;
+      margin: 0;
+      padding: 16px 0 0 0;
+
+      .checkoutOrderSummaryHeader {
+        margin: 0 0 6px 0;
+      }
+
+      .checkoutOrderSummaryBtn {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 46px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $borderGrey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .checkoutOrderSummaryBagHeader {
+          margin: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .checkoutOrderSummaryBagItem {
+            margin: 0;
+            font-size: 18px;
+          }
+
+          .checkoutOrderSummaryBagToggle {
+            margin: 0;
+            display: flex;
+          }
+        }
+
+        .checkoutOrderSummaryBagValue {
+          margin: 0;
+          font-size: 18px;
+        }
+      }
+
+      .checkoutOrderSummaryDetails {
+        margin: 0;
+        padding: 16px 0 0 0;
+        border-bottom: 1px solid $borderGrey;
+      }
+
+      .checkoutOrderSummaryCalculator {
+        margin: 0;
+        padding: 12px 0 0 0;
+
+        .checkoutOrderSummaryCalculatorBlock {
+          margin: 0;
+          padding: 0 0 14px 0;
+          display: flex;
+          justify-content: space-between;
+
+          .checkoutOrderSummaryCalculatorInfo {
+            margin: 0;
+          }
+        }
+
+        .checkoutOrderSummaryCalculatorSum {
+          margin: 0;
+          padding: 14px 0 0 0;
+          border-top:  1px solid $borderGrey;
+          display: flex;
+          justify-content: space-between;
+
+          .checkoutOrderSummaryCalculatorSumInfo {
+            margin: 0;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+
+  .checkoutModal {
+    padding: 20px 0 40px 0; /* Location of the modal box */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Black w/ opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 104;
+    overflow: auto; /* Enable scroll if needed */
+    animation: fadeIn .5s cubic-bezier(.55, .09, .68, .53) forwards;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .checkoutModalContainer {
+      margin-top: auto;
+      margin-bottom: auto;
+      background: v.$bcWhite;
+      border-radius: 4px;
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, .2);
+      position: relative;
+    }
+
+    .checkoutModalClose {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      margin: 0;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 106;
+    }
+  }
+}

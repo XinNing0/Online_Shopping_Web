@@ -1,0 +1,120 @@
+// to load pre-defined global styles
+@use '../index.scss' as v;
+
+// test border
+$lightGrey: #53565A;
+$shadow: rgba(83, 86, 90, 0.2);
+$borderRed: 1px red solid;
+$borderBlue: 1px blue solid;
+
+// Review Card
+.reviewsCard {
+  margin: 0 0 16px 0;
+  padding: 16px 24px;
+  border: 1px solid #fff;
+  border-top: none;
+  background-color: v.$bcWhite;
+  box-shadow: 0 4px 2px -2px $shadow;
+
+  // Person who provides a review
+  .reviewsCardPerson {
+    display: flex;
+    align-items: center;
+
+    .reviewsCardLogo {
+      margin: 0;
+      padding: 0;
+      background-color: #8d9196;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      position: relative;
+
+      p {
+        position: absolute;
+        left: 7px;
+        top: 3.5px;
+        color: white;
+      }
+    }
+
+    .reviewsCardName {
+      margin: 0 0 0 8px;
+      font-size: 14px;
+    }
+
+    .reviewsCardTime {
+      margin: 0 0 0 8px;
+      color: $lightGrey;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  // Rating
+  .reviewsCardRatingStars {
+    margin: 16px 0 8px 0;
+    display: flex;
+    align-items: baseline;
+    font-size: 26px;
+    font-weight: 400;
+
+    p {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+
+  // Content
+  .reviewsCardContentsHeader {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .reviewsCardContentsText {
+    margin: 8px 0 0 0;
+  }
+
+  // Fits
+  .reviewsCardFitsInfo {
+    margin: 16px 0 0 0;
+    padding: 0;
+    display: flex;
+
+    .reviewsCardSizeFit {
+      margin: 0 17px 0 0;
+      display: flex;
+      font-size: 14px;
+
+      p {
+        margin: 0 0 0 3px;
+        color: $lightGrey;
+        font-size: 14px;
+      }
+    }
+  }
+
+  // Reply
+  .reviewsCardReply {
+    margin: 8px 0 0 0;
+    display: flex;
+    align-items: center;
+
+    .reviewsCardAgree, .reviewsCardQuestion {
+      margin: 0 8px 0 0;
+      padding: 1px 6px 1px 0;
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0 0 0 6px;
+        color: $lightGrey;
+        font-size: 14px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

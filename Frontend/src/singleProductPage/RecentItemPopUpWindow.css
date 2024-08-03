@@ -1,0 +1,302 @@
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.popupInner .closeBtn {
+  cursor: pointer;
+  display: block;
+  height: 1rem;
+  right: 0;
+  top: 0;
+  width: 1rem;
+  background: none;
+  border: none;
+  position: absolute;
+}
+.popupInner .closeBtn .closeLink {
+  color: #000;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  margin: 0;
+  background: none;
+  border: none;
+}
+.popupInner .closeBtn .closeLink .svgCloseIcon {
+  display: block;
+  fill: #53565a;
+  height: 100%;
+  pointer-events: none;
+  width: 100%;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  position: absolute;
+  right: 0.35rem;
+  top: 0.26rem;
+  margin: 0rem;
+}
+.popupInner .popUpHeader {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid #e0e0e0;
+  padding-bottom: 0.75rem;
+}
+.popupInner .popUpHeader .headerTitleCapitalize {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 1rem;
+}
+.popupInner .popUpHeader .bagContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+}
+.popupInner .popUpHeader .bagContainer .bagItemQuantity {
+  margin-left: 0.2rem;
+  margin-top: 0.3rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: row;
+}
+.productContainer .productInfoBoxContainer {
+  flex-direction: row;
+  border-bottom: none;
+  display: flex;
+  margin-bottom: 0;
+  padding: 0 1.5625rem 0 0;
+  border-right: 0.0625rem solid #e0e0e0;
+  margin-left: 0;
+  flex: 2;
+  width: 55%;
+}
+.productContainer .productInfoBoxContainer .productInfoImage {
+  height: auto;
+  padding-right: 0.78125rem;
+  padding-left: 0;
+  width: 60%;
+  flex: 1;
+}
+.productContainer .productInfoBoxContainer .productInfoImage img {
+  height: auto;
+  width: 70%;
+}
+.productContainer .productInfoBoxContainer .productBasicInfoContainer {
+  padding-right: 0.78125rem;
+  padding-left: 0.78125rem;
+  margin-left: -1rem;
+}
+.productContainer .productInfoBoxContainer .productBasicInfoContainer .productTitleInfo {
+  font-size: 1.4375rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+  line-height: 1.2;
+}
+.productContainer .productInfoBoxContainer .productBasicInfoContainer .productInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 1.5rem;
+  font-size: 1.15rem;
+  margin-left: 0;
+  padding-left: 0;
+  justify-content: left;
+}
+.productContainer .productInfoBoxContainer .productBasicInfoContainer .productInfo .productInfoSize {
+  margin: 0;
+  padding: 0.3125rem 0;
+  line-height: 1.25;
+}
+.productContainer .productInfoBoxContainer .productBasicInfoContainer .productInfo .productInfoPrice {
+  margin: 0;
+  padding: 0.3125rem 0;
+  line-height: 1.25;
+}
+.productContainer .bagDetails {
+  max-width: 1000px;
+  margin-left: 1rem;
+  margin-right: 0;
+}
+.productContainer .bagDetails .bagDetailsInfo {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.25;
+}
+.productContainer .bagDetails .bagDetailsInfo .bagDetailsInfoSubtotal {
+  font-weight: 400;
+  margin: 0 0.5625rem 0 0;
+  font-size: 1.15rem;
+}
+.productContainer .bagDetails .bagDetailsInfo .bagDetailsTotalPrice {
+  text-align: right;
+  margin-right: 0;
+}
+.productContainer .bagDetails .checkoutContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.productContainer .bagDetails .checkoutContainer .buttonCheckout {
+  display: flex;
+  width: 100%;
+  background-color: #c8102e;
+  color: #fff;
+  border: 0.0625rem solid #c8102e;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.productContainer .bagDetails .continueShoppingLinkContainer {
+  display: flex;
+  justify-content: center;
+}
+.productContainer .bagDetails .continueShoppingLinkContainer .continueShoppingBtn {
+  line-height: 1.4285714286;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  flex-direction: row;
+}
+.productContainer .bagDetails .continueShoppingLinkContainer .continueShoppingBtn span {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  line-height: 1.4285714286;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+}
+.productContainer .bagDetails .continueShoppingLinkContainer .continueShoppingBtn .continueShoppingLinkIcon {
+  color: #c8102e;
+  margin-right: 0.25rem;
+  pointer-events: none;
+  position: relative;
+  top: 0.05rem;
+  transition: margin-left 0.25s ease, margin-right 0.25s ease;
+}
+
+.productRecommendationContainer {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+.productRecommendationContainer .recommendationHeader h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.2;
+}
+.productRecommendationContainer .storyCarouselWrapper {
+  padding-top: 1.125rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+}
+.productRecommendationContainer .storyCarouselWrapper .storyCarouselContainer {
+  margin: 0;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper {
+  display: flex;
+  flex-direction: row;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperFirstItem {
+  margin-right: 25px;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperFirstItem img {
+  width: 199.5px;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperFirstItem h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0.9375rem 0 0.4375rem;
+  text-align: left;
+  cursor: pointer;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperFirstItem span {
+  color: #000;
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0 0 0.9375rem;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperSecondItem {
+  margin-right: 25px;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperSecondItem img {
+  width: 199.5px;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperThirdItem {
+  margin-right: 25px;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperThirdItem img {
+  width: 199.5px;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperFourthItem {
+  margin-right: 25px;
+}
+.productRecommendationContainer .storyCarouselWrapper .swiperWrapper .swiperFourthItem img {
+  width: 199.5px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0.9375rem 0 0.4375rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+span {
+  color: #000;
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0 0 0.9375rem;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.popup .product-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup .product-details img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=RecentItemPopUpWindow.css.map */

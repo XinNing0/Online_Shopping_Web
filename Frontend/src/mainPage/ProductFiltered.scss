@@ -1,0 +1,44 @@
+// to load pre-defined global styles
+@use '../index.scss' as v;
+
+.ProductFilteredContainers {
+  //margin: 16px;
+  padding: 20px 0;
+  width: 985px;
+  display: flex;
+  //flex-wrap: wrap;
+  //justify-content: flex-start;
+  gap: 10px;
+  //border: 1px black solid;
+  height: 86px;
+  // to slide colors
+  overflow: hidden;
+  white-space: nowrap;
+  overflow-x: auto;
+
+  .ProductFilteredItem {
+    background-color: v.$bcWhite;
+    margin: 0;
+    padding: 11px 12px;
+    border-radius: 5px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    outline: none;
+    border: 1px solid #aaa8a8;
+    font-weight: 600;
+
+    div {
+      font-weight: 300;
+      color: v.$textGrey;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid v.$textBlack;
+      outline: v.$textBlack;
+    }
+  }
+}

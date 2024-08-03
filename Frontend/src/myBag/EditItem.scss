@@ -1,0 +1,187 @@
+.editContainer {
+  position: relative;
+  height: 653px;
+  width: 1050px;
+  display: flex;
+  justify-content: flex-start; /* Align items to the start horizontally */
+  align-items: flex-start;
+
+  .editInfo {
+    width: 422px;
+
+    margin: 30px auto;
+    .editProductDetails{
+      font-size: 16px;
+      width:148px;
+      border-bottom: 1px solid black;
+      margin-left: 145px;
+      &:hover{
+        cursor:pointer;
+        border-bottom: 1px solid red;
+      }
+
+
+    }
+    .editUpdateButton{
+
+      width:403px;
+      background-color: #c8102e;
+      color:white;
+      border:none;
+      height:53.2px;
+      margin:18px 3px;
+      border-radius: 0.25rem;
+      font-size: 16px;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .editSizeItems{
+      display: flex;
+      justify-content:flex-start;
+      flex-wrap: wrap;
+      width:440px;
+      margin-top: 7px;
+      gap:2px;
+      .editSizeButton{
+        font-size: 17px;
+        font-weight: bold;
+        min-width:36px;
+        height:36px;
+        margin:10px 4px ;
+        border:1px solid #d3d5d7;
+        background-color: white;
+        border-radius: 0.25rem;
+        &:hover{
+          cursor:pointer;
+          border:2px solid black;
+
+        }
+
+      }
+    }
+
+    .editProductName {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      width:410px;
+      margin-left:0px;
+    }
+
+    .editPrice {
+      font-size: 19px;
+      margin-bottom:15px;
+      margin-left: 5px;
+    }
+
+    .editColorAlt {
+      font-size: 17px;
+      margin-bottom:5px;
+    }
+
+    .editColor {
+      //margin: 0;
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
+      width: 425px;
+      flex-wrap: wrap;
+      margin: 12px 0 0 0;
+
+      .editColorBorder {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        margin: 4px 4px;
+        padding: 0;
+        &:hover{
+          outline: 2px solid lightgray;
+        }
+
+
+
+
+
+        .editColorItem {
+          border-radius: 50%;
+          width: 34px;
+          height: 34px;
+          outline: 1px solid lightgray;
+          &:hover{
+            cursor:pointer;
+
+
+          }
+          //margin: 2px 4px;
+          //padding: 2px;
+
+        }
+      }
+
+      .editColorItemSelect {
+        outline: 2px solid black;
+
+      }
+    }
+  }
+
+
+  .editCarouselImage {
+    position: relative;
+    margin: 0px;
+
+    left: 0px;
+
+    .editImagePrev {
+      border: none;
+      background-color: white;
+      position: absolute;
+      //margin-top: 100px;
+
+      top: 47%;
+      height: 48px;
+      width: 48px;
+      border-radius: .25rem;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    .editImageNext {
+      position: absolute;
+      left: 490px;
+      border: none;
+      background-color: white;
+      top: 47%;
+      border-radius: .25rem;
+      //margin-top: 100px;
+      cursor: pointer;
+
+
+      height: 48px;
+      width: 48px;
+    }
+
+    .editImageContainer {
+      position: relative;
+      display: flex;
+      justify-content: flex-start; /* Align items to the start horizontally */
+      align-items: flex-start;
+      overflow: hidden;
+      width: 548px;
+      left: 0px;
+      margin: 0px;
+      border-radius: .25rem;
+
+      .editImage {
+        width: 548px;
+        border-radius: .25rem;
+        margin: 0 0 -5px 0;
+      }
+    }
+  }
+}

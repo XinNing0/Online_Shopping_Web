@@ -1,0 +1,224 @@
+.empty-bag {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 400px;
+}
+
+.empty-bag h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.shop-button {
+  background-color: #d62828;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 11px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #b22222;
+}
+
+.cart-page {
+  display: flex;
+  padding: 25px;
+  max-width: 1440px;
+
+  .cart-saved{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cart-items, .saved-items {
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .saved-items {
+    margin-top: 50px !important;
+  }
+  .notification-box {
+    display: flex;
+    align-items: center;
+    width: 916px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+
+    i {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .these-items {
+      margin-left: 5px;
+      margin-bottom: 0;
+    }
+  }
+
+  .cart-item, .saved-items {
+    display: flex;
+    //flex-direction: row;
+    flex-wrap: wrap;
+    width: 916px;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    //margin-right: 200px;
+    margin-top: 0;
+    align-items: flex-start;
+
+    .cart-item-image, .saved-item-image {
+      width: 200px;
+      height: auto;
+    }
+
+    .cart-item-details, .saved-item-details{
+      flex: 1;
+      padding-left: 20px;
+
+      .cart-item-details, .saved-item-details.h2 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .cart-item-details, .saved-item-details.p {
+        margin-top: 5px;
+      }
+
+      .edit-link {
+        display: inline-block;
+        margin-top: 5px;
+        text-decoration: underline;
+        font-size: 0.8rem;
+        color: black;
+        text-decoration-color: black;
+        cursor: pointer;
+        transition: color 0.3s, text-decoration-color 0.3s;
+        position: relative;
+      }
+
+      .edit-link:hover {
+        text-decoration-color: red;
+      }
+
+      .free {
+        margin-top: 100px;
+      }
+    }
+
+    .cart-item-actions {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+
+      .actions-direction {
+
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 100px;
+
+        .item-price,
+        .quantity-section,
+        .total-price {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p, label, select {
+            margin: 5px 0;
+          }
+        }
+      }
+
+      .p-section {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: row;
+
+        .underline {
+          background: none;
+          border: none;
+          cursor: pointer;
+          text-decoration: underline;
+          color: black;
+          text-decoration-color: black;
+          transition: color 0.3s, text-decoration-color 0.3s;
+          position: relative;
+          padding-left: 10px;
+
+          .remove{
+            padding-left: 10px !important;
+            display: block;
+            text-decoration: underline;
+            color: black;
+            text-decoration-color: black;
+            cursor: pointer;
+            transition: color 0.3s, text-decoration-color 0.3s;
+            position: relative;
+              //border-left: 1px solid #ab3e3e;
+          }
+        }
+
+        .underline:hover {
+          text-decoration-color: red;
+        }
+      }
+    }
+  }
+
+  .saved-items{
+    margin-top: 200px;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: white;
+
+    border-radius: 0.25rem;
+
+    width: 1050px;
+    position: relative;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

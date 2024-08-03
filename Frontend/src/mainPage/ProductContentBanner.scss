@@ -1,0 +1,42 @@
+
+@use "../index.scss" as v;
+
+.ProductContentBanner {
+  width:985px;
+
+  .ProductContentBannerPicture {
+    width: 985px;
+    height: 385px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .ProductContentBannerMenu {
+    display: flex;
+    background-color: v.$bcWhite;
+
+    div {
+      padding: 10px;
+
+      div{
+        position:relative;
+        @include v.redLineAnim(pointer, 100%, .25s);
+      }
+      .selected {
+        position:relative;
+        &::before {
+          content: '';
+          position: absolute;
+          height: 3px;
+          left: 0;
+          bottom: -9px;
+          width: 100%;
+          background: v.$hoverColor;
+        }
+      }
+    }
+  }
+}

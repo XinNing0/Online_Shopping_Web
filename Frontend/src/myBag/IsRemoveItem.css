@@ -1,0 +1,39 @@
+.isRemoveItemContainer {
+  display: flex;
+  flex-direction: column;
+}
+.isRemoveItemContainer .isRemoveItemHeader {
+  margin: 0;
+  line-height: 140%;
+  font-size: 24px;
+}
+.isRemoveItemContainer .isRemoveItemRemoveBtn {
+  margin: 12px 0 0 0;
+  padding: 16px;
+  border: 1px solid #c8102e;
+  border-radius: 5px;
+  background-color: #c8102e;
+  color: white;
+  letter-spacing: 1px;
+}
+.isRemoveItemContainer .isRemoveItemRemoveBtn:hover {
+  border-color: #a00d25;
+  background-color: #a00d25;
+  cursor: pointer;
+}
+.isRemoveItemContainer .isRemoveItemClose .isRemoveItemCloseBtn {
+  margin: 16px 0 0 0;
+  padding: 0 0 2px 0;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: #8d9196;
+}
+.isRemoveItemContainer .isRemoveItemClose .isRemoveItemCloseBtn:hover {
+  cursor: pointer;
+  text-decoration-color: #c8102e;
+}
+
+/*# sourceMappingURL=IsRemoveItem.css.map */

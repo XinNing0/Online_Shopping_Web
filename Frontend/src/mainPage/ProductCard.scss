@@ -1,0 +1,247 @@
+// to load pre-defined global styles
+@use '../index.scss' as v;
+
+// test border
+$borderRed: 1px red solid;
+$borderBlue: 1px blue solid;
+
+.productCardContainers {
+  //border: $borderRed;
+  margin: 0 0 32px 0;
+  //padding: 0 10px;
+  height: 515px;
+  width: 313px;
+  position: relative;
+
+  // For Product Image Section
+  .productCardImageContainer {
+    position: relative;
+    //border: $borderRed;
+    width: 313px;
+    height: 376px;
+
+    // For images
+    .productCardImage {
+      width: 312px;
+      margin: 0 0 -5px 0;
+      transition: opacity .15s;
+      //position: absolute;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    // For favorite icon
+    .productCardFav {
+      background-color: v.$bcOffWhite;
+      border: none;
+      border-radius: 50%;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  // For Product Information Section
+  .productCardSecondContent {
+    //border: $borderBlue;
+    margin: 4px 0;
+    padding: 0 0 36px 0;
+    position: absolute;
+    top: 375px;
+    width: 313px;
+    height: 137px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    // For Color Select Bar
+    .productCardColorSelect {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 8px 0;
+      padding: 0;
+      width: 100%;
+      height: 38px;
+      position: relative;
+
+      // For Colors under 7
+      .productCardColorItems {
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+
+        .productCardColorBorder {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          margin: 2px 4px;
+          padding: 0;
+
+          .productCardColorItem {
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            //margin: 2px 4px;
+            //padding: 2px;
+
+          }
+        }
+        .productCardColorItemSelect {
+          outline: 1px solid black
+        }
+      }
+
+      // For Colors over 7
+      .productCardColorCarousel {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        //width: 100%;
+        //position: relative;
+
+        .productCardColorMoreItems {
+          margin: 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          position: absolute;
+          left: 30px;
+          // to slide colors
+          width: 252px; // to specify the width of the slidable area
+          overflow: hidden; // to hide color if it is over area
+
+          .productCardColorBorder {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin: 2px 3px;
+            padding: 3px;
+
+            .productCardColorItem {
+              border-radius: 50%;
+              width: 24px;
+              height: 24px;
+              margin: 2px 0;
+              //padding: 2px;
+              outline: 1px solid grey;
+            }
+          }
+          .productCardColorItemSelect {
+            outline: 1px solid black
+          }
+        }
+
+        // Prev and Next Arrows
+        .productCardColorPrev, .productCardColorNext {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          width: 14px;
+          border: none;
+          background-color: transparent;
+          padding: 0;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .productCardColorPrev {
+          left: 0;
+        }
+
+        .productCardColorNext {
+          right: 10px;
+        }
+      }
+    }
+
+    // For Product Name & Price
+    .productCardContent {
+      //border: $borderRed;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 16px;
+      margin: 8px 0 0 2px;
+      padding: 0;
+      height: 72px;
+      position: relative;
+
+      .productCardName {
+        //border: $borderRed;
+        margin: 0;
+        width: 250px;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+
+      .productCardPrice {
+        //border: $borderRed;
+        margin: 0;
+        max-width: 46px;
+        font-weight: normal;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    // For Product Compare
+    .productCardCompare {
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      bottom: 0;
+      background-color: transparent;
+      padding: 0;
+
+      .productCartCheck, .productCartCompare {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+      }
+
+      // check box animation
+      #checkBox {
+        display: flex;
+      }
+
+      #checkOutBox {
+        display: none;
+      }
+
+      &:hover > #checkBox {
+        display: none;
+      }
+
+      &:hover > #checkOutBox, &:hover {
+        display: flex;
+        cursor: pointer;
+      }
+    }
+  }
+}

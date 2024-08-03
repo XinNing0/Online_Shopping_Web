@@ -1,0 +1,227 @@
+.order-summary {
+  width: 300px;
+  margin-right: 50px;
+  margin-left: 10px;
+  margin-top: 30px;
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .summary-details {
+    .summary-item, .summary-total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      position: relative;
+      border-bottom: 1px solid rgba(194, 190, 190, 0.71);
+
+      .label {
+        text-align: left;
+        flex: 1;
+        font-size: 0.8rem;
+      }
+
+      .value {
+        text-align: right;
+        font-size: 0.8rem;
+        flex: 1;
+        white-space: nowrap;
+      }
+
+      .info-icon {
+        cursor: pointer;
+        margin-left: 5px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: white;
+        color: #333333;
+        font-family: Arial, sans-serif;
+        border: 1px solid #131313;
+        position: relative;
+      }
+
+      .info-icon::before {
+        content: 'i';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.6rem;
+        line-height: 1;
+      }
+
+      .tooltip {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.7rem;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        z-index: 100;
+        margin-bottom: 5px;
+      }
+    }
+
+    .summary-total {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .payment-options {
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 10px;
+    margin-left: 0;
+    color: #333;
+    position: relative;
+
+    b {
+      font-weight: bold;
+    }
+
+    span.label {
+      font-size: 0.6rem;
+    }
+
+    .info-icon {
+      cursor: pointer;
+      margin-left: 5px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+      color: #333333;
+      font-family: Arial, sans-serif;
+      border: 1px solid #131313;
+      position: relative;
+    }
+
+    .info-icon::before {
+      content: 'i';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.7rem;
+      line-height: 1;
+    }
+
+    .tooltip {
+      position: absolute;
+      //bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      z-index: 10;
+      margin-bottom: 5px;
+      bottom: 15px;
+    }
+  }
+
+  .checkout-button {
+    width: 103%;
+    padding: 10px;
+    background-color: #d62828;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    .checkout-logo {
+      height: 20px;
+      margin-right: 15px;
+      margin-left: 5px;
+    }
+
+  }
+  .paypalButton {
+    width: 103%;
+    padding: 10px;
+    background-color: #0070ba;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  .paypal-button {
+    background-color: #0079c1;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .checkoutModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .checkoutModalBackdrop {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .checkoutModalContainer {
+    position: relative;
+    width: 424px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1010;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .checkoutModalClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+}

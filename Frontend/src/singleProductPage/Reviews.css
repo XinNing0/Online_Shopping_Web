@@ -1,0 +1,304 @@
+* {
+  margin: 0 auto;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #fafafa;
+  color: #000000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Calibre", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+:export {
+  bcOffWhite: #fafafa;
+}
+
+.reviews {
+  margin: 0 auto 24px auto;
+  padding: 0 25px;
+  width: 1372px;
+}
+.reviews .reviewsHeader {
+  margin: 0 0 40px 0;
+  padding: 40px 0 0 0;
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1314px;
+  gap: 16px;
+}
+.reviews .reviewsHeader h1 {
+  margin: 0;
+  width: 320px;
+  font-size: 48px;
+}
+.reviews .reviewsHeader .reviewsHeaderRating {
+  margin: 0;
+  padding: 0;
+  width: 328px;
+}
+.reviews .reviewsHeader .reviewsHeaderRating .reviewsHeaderRatingRate {
+  display: flex;
+  align-items: baseline;
+  font-size: 26px;
+  font-weight: 400;
+  position: relative;
+}
+.reviews .reviewsHeader .reviewsHeaderRating .reviewsHeaderRatingRate p {
+  margin: 0;
+  position: absolute;
+  left: 35px;
+  top: 2px;
+}
+.reviews .reviewsHeader .reviewsHeaderRating .reviewsHeaderRatingContent {
+  margin: 8px 0;
+  font-size: 12px;
+  font-weight: 300;
+}
+.reviews .reviewsHeader .reviewsHeaderFit {
+  margin: 0;
+  padding: 0;
+  width: 210px;
+}
+.reviews .reviewsHeader .reviewsHeaderFit h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers {
+  margin: 8px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 350;
+  color: #53565A;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers .reviewsHeaderFitInputContainer {
+  margin: 0;
+  display: flex;
+  gap: 2px;
+  width: 108px;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers .reviewsHeaderFitInputContainer .reviewsHeaderInput {
+  position: relative;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers .reviewsHeaderFitInputContainer .reviewsHeaderInput .reviewsFitRangeInput {
+  appearance: none;
+  margin: 0;
+  height: 6px;
+  width: 20px;
+  background-color: #d3d5d7;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers .reviewsHeaderFitInputContainer .reviewsHeaderInput .reviewsFitRangeInput:checked {
+  background-color: #000000;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers .reviewsHeaderFitInputContainer .reviewsHeaderInput .reviewsFitRangeLabel {
+  display: none;
+  padding: 5px 8px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #53565A;
+  font-size: 10px;
+}
+.reviews .reviewsHeader .reviewsHeaderFit .reviewsHeaderFitContainers .reviewsHeaderFitInputContainer .reviewsHeaderInput:hover > .reviewsFitRangeLabel {
+  display: block;
+}
+.reviews .reviewsHeader .reviewsHeaderBtnContainer {
+  margin: 0 0 0 96px;
+  padding: 0;
+}
+.reviews .reviewsHeader .reviewsHeaderBtnContainer .reviewsHeaderBtn {
+  margin: 16px 0 0 0;
+  padding: 16px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: 312px;
+  border-radius: 5px;
+}
+.reviews .reviewsHeader .reviewsHeaderBtnContainer .reviewsHeaderBtn:hover {
+  background-color: #53565A;
+  border-color: #53565A;
+  cursor: pointer;
+}
+.reviews .reviewsContainers {
+  display: flex;
+}
+.reviews .reviewsContainers .reviewsFilters {
+  margin: 0 22px 0 0;
+  padding: 0;
+  width: 312px;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersHeader {
+  margin: 0 0 16px 0;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersInputContainer {
+  outline: black solid 1px;
+  border-radius: 5px;
+  margin: 0 0 18px 0;
+  padding: 14px 12px 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersInputContainer .reviewsFiltersInputBtn {
+  margin: 0 4px 0 14px;
+  padding: 1px 2px;
+  border: none;
+  background-color: transparent;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersInputContainer .reviewsFiltersInputBtn:focus {
+  outline: none;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersInputContainer:focus-within {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.45);
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 19px 16px;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating {
+  margin: 0 0 16px 0;
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid #53565A;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingHeader {
+  margin: 0 0 16px;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers {
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers .reviewsFiltersRatingInput {
+  margin: 0 8px 0 1px;
+  width: 13.5px;
+  height: 13.5px;
+  appearance: none;
+  outline: 1px solid #53565A;
+  cursor: pointer;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers .reviewsFiltersRatingInput:checked {
+  appearance: none;
+  background-color: #53565A;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers .reviewsFiltersRatingLabel {
+  margin: 0;
+  display: flex;
+  cursor: pointer;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers .reviewsFiltersRatingLabel p {
+  margin: 0 0 0 16px;
+  color: #53565A;
+  font-size: 14px;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers .reviewsFiltersRatingCount {
+  margin: 0 0 0 16px;
+  color: #53565A;
+  font-size: 14px;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers:hover {
+  cursor: pointer;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers {
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers .reviewsFiltersRatingStarts {
+  margin: 0;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers .reviewsFiltersRatingCount {
+  margin: 0 0 0 16px;
+  color: #53565A;
+  font-size: 14px;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersRating .reviewsFiltersRatingContainers:hover {
+  cursor: pointer;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersPhotos .reviewsFiltersRatingHeader {
+  margin: 0 0 16px;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersPhotos .reviewsFiltersPhotosContainer {
+  display: flex;
+  align-items: center;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersPhotos .reviewsFiltersPhotosContainer .reviewsFiltersPhotoSelect {
+  margin: 0;
+}
+.reviews .reviewsContainers .reviewsFilters .reviewsFiltersContainer .reviewsFiltersPhotos .reviewsFiltersPhotosContainer:hover {
+  cursor: pointer;
+}
+.reviews .reviewsContainers .reviewsContentsContainers {
+  margin: 0;
+  padding: 0;
+  width: 980px;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsContentsInfo {
+  margin: 0 0 16px 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsContentsInfo .reviewsContentsResults {
+  margin: 0;
+  padding: 0;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsContentsInfo .reviewsContentsSort {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsContentsInfo .reviewsContentsSort:hover {
+  cursor: pointer;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsContentsInfo .reviewsContentsSort .reviewsSortSelect {
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsContentsInfo .reviewsContentsSort .reviewsSortSelect .reviewsSortOption {
+  position: absolute;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsListLoadingBtn {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsListLoadingBtn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.reviews .reviewsContainers .reviewsContentsContainers .reviewsListViewingShowup {
+  margin: 8px 0 0 0;
+  padding: 0;
+  color: #53565A;
+}
+
+/*# sourceMappingURL=Reviews.css.map */

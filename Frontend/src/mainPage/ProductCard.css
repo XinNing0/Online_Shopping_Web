@@ -1,0 +1,166 @@
+* {
+  margin: 0 auto;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #fafafa;
+  color: #000000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Calibre", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+.productCardContainers {
+  border: 1px red solid;
+  margin: 0 0 32px 0;
+  padding: 0 12.5px;
+  width: 350px;
+  position: relative;
+}
+.productCardContainers .productCardImageContainer {
+  position: relative;
+}
+.productCardContainers .productCardImageContainer .productCardImage {
+  width: 100%;
+  transition: opacity 0.15s;
+}
+.productCardContainers .productCardImageContainer .productCardImage:hover {
+  cursor: pointer;
+}
+.productCardContainers .productCardImageContainer .productCardFav {
+  background-color: #fafafa;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+.productCardContainers .productCardImageContainer .productCardFav:hover {
+  cursor: pointer;
+}
+.productCardContainers .productCardSecondContent {
+  border: 1px blue solid;
+  margin: 8px 0 0 0;
+  padding: 0 0 36px 0;
+}
+.productCardContainers .productCardSecondContent:hover {
+  cursor: pointer;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 8px 0;
+  padding: 3px 0 0 0;
+  width: 100%;
+  height: 38px;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorItems {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorItems .productCardColorItem {
+  border: 4px white solid;
+  margin: 2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorItems .productCardColorItem:hover {
+  outline: black solid 1px;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorMoreItems {
+  display: flex;
+  justify-content: space-between;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorMoreItems .productCardColorItem {
+  border: 4px white solid;
+  margin: 2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorMoreItems .productCardColorItem:hover {
+  outline: black solid 1px;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorPrev, .productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorNext {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 14px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorPrev:hover, .productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorNext:hover {
+  cursor: pointer;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorPrev {
+  left: -30px;
+}
+.productCardContainers .productCardSecondContent .productCardColorSelect .productCardColorCarousel .productCardColorNext {
+  right: -20px;
+}
+.productCardContainers .productCardSecondContent .productCardContent {
+  border: 1px red solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 19px;
+}
+.productCardContainers .productCardSecondContent .productCardContent .productCardName {
+  margin: 0;
+  font-weight: 500;
+}
+.productCardContainers .productCardSecondContent .productCardContent .productCardPrice {
+  margin: 0;
+}
+.productCardContainers .productCardSecondContent .productCardCompare {
+  border: 1px blue solid;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+}
+.productCardContainers .productCardSecondContent .productCardCompare .productCartCheck, .productCardContainers .productCardSecondContent .productCardCompare .productCartCompare {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.productCardContainers .productCardSecondContent .productCardCompare #checkBox {
+  display: flex;
+}
+.productCardContainers .productCardSecondContent .productCardCompare #checkOutBox {
+  display: none;
+}
+.productCardContainers .productCardSecondContent .productCardCompare:hover > #checkBox {
+  display: none;
+}
+.productCardContainers .productCardSecondContent .productCardCompare:hover > #checkOutBox, .productCardContainers .productCardSecondContent .productCardCompare:hover {
+  display: flex;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=ProductCard.css.map */

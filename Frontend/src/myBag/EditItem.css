@@ -1,0 +1,151 @@
+.editContainer {
+  position: relative;
+  height: 653px;
+  width: 1050px;
+  display: flex;
+  justify-content: flex-start; /* Align items to the start horizontally */
+  align-items: flex-start;
+}
+.editContainer .editInfo {
+  width: 422px;
+  margin: 30px auto;
+}
+.editContainer .editInfo .editProductDetails {
+  font-size: 16px;
+  width: 148px;
+  border-bottom: 1px solid black;
+  margin-left: 145px;
+}
+.editContainer .editInfo .editProductDetails:hover {
+  cursor: pointer;
+  border-bottom: 1px solid red;
+}
+.editContainer .editInfo .editUpdateButton {
+  width: 403px;
+  background-color: #c8102e;
+  color: white;
+  border: none;
+  height: 53.2px;
+  margin: 18px 3px;
+  border-radius: 0.25rem;
+  font-size: 16px;
+}
+.editContainer .editInfo .editUpdateButton:hover {
+  cursor: pointer;
+}
+.editContainer .editInfo .editSizeItems {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 440px;
+  margin-top: 7px;
+  gap: 2px;
+}
+.editContainer .editInfo .editSizeItems .editSizeButton {
+  font-size: 17px;
+  font-weight: bold;
+  min-width: 36px;
+  height: 36px;
+  margin: 10px 4px;
+  border: 1px solid #d3d5d7;
+  background-color: white;
+  border-radius: 0.25rem;
+}
+.editContainer .editInfo .editSizeItems .editSizeButton:hover {
+  cursor: pointer;
+  border: 2px solid black;
+}
+.editContainer .editInfo .editProductName {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  width: 410px;
+  margin-left: 0px;
+}
+.editContainer .editInfo .editPrice {
+  font-size: 19px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+.editContainer .editInfo .editColorAlt {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.editContainer .editInfo .editColor {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  width: 425px;
+  flex-wrap: wrap;
+  margin: 12px 0 0 0;
+}
+.editContainer .editInfo .editColor .editColorBorder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  margin: 4px 4px;
+  padding: 0;
+}
+.editContainer .editInfo .editColor .editColorBorder:hover {
+  outline: 2px solid lightgray;
+}
+.editContainer .editInfo .editColor .editColorBorder .editColorItem {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  outline: 1px solid lightgray;
+}
+.editContainer .editInfo .editColor .editColorBorder .editColorItem:hover {
+  cursor: pointer;
+}
+.editContainer .editInfo .editColor .editColorItemSelect {
+  outline: 2px solid black;
+}
+.editContainer .editCarouselImage {
+  position: relative;
+  margin: 0px;
+  left: 0px;
+}
+.editContainer .editCarouselImage .editImagePrev {
+  border: none;
+  background-color: white;
+  position: absolute;
+  top: 47%;
+  height: 48px;
+  width: 48px;
+  border-radius: 0.25rem;
+  left: 10px;
+  cursor: pointer;
+}
+.editContainer .editCarouselImage .editImageNext {
+  position: absolute;
+  left: 490px;
+  border: none;
+  background-color: white;
+  top: 47%;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+}
+.editContainer .editCarouselImage .editImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align items to the start horizontally */
+  align-items: flex-start;
+  overflow: hidden;
+  width: 548px;
+  left: 0px;
+  margin: 0px;
+  border-radius: 0.25rem;
+}
+.editContainer .editCarouselImage .editImageContainer .editImage {
+  width: 548px;
+  border-radius: 0.25rem;
+  margin: 0 0 -5px 0;
+}
+
+/*# sourceMappingURL=EditItem.css.map */

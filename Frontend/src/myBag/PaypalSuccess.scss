@@ -1,0 +1,34 @@
+
+.thankYouMessage {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333;
+  font-weight: bold;
+}
+
+.goBackToMainPage {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em;
+  color: #0066cc;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #004080;
+    text-decoration: underline;
+  }
+}
+
+.thankYouContainer {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}

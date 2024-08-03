@@ -1,0 +1,445 @@
+// to load pre-defined global styles
+@use '../index.scss' as v;
+
+// test border
+$lightGrey: #53565A;
+$shadow: rgba(83, 86, 90, 0.2);
+$borderRed: 1px red solid;
+$borderBlue: 1px blue solid;
+
+.reviews {
+  margin: 0 auto 24px auto;
+  padding: 0 25px;
+  width: 1372px;
+
+  // Review Header
+  .reviewsHeader {
+    margin: 0 0 40px 0;
+    padding: 40px 0 0 0;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1314px;
+    gap: 16px;
+
+    h1 {
+      margin: 0;
+      width: 320px;
+      font-size: 48px;
+    }
+
+    .reviewsHeaderRating {
+      margin: 0;
+      padding: 0;
+      width: 328px;
+
+      .reviewsHeaderRatingRate {
+        display: flex;
+        align-items: baseline;
+        font-size: 26px;
+        font-weight: 400;
+        position: relative;
+
+        p {
+          margin: 0;
+          position: absolute;
+          left: 35px;
+          top: 2px;
+        }
+      }
+      .reviewsHeaderRatingContent {
+        margin: 8px 0;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+
+    .reviewsHeaderFit {
+      margin: 0;
+      padding: 0;
+      width: 210px;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      .reviewsHeaderFitContainers {
+        margin: 8px 0;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        p {
+          margin: 0;
+          font-size: 11px;
+          font-weight: 350;
+          color: $lightGrey;
+        }
+
+        .reviewsHeaderFitInputContainer {
+          margin: 0;
+          display: flex;
+          gap: 2px;
+          width: 108px;
+
+          .reviewsHeaderInput {
+            //display: flex;
+            //flex-direction: column;
+            position: relative;
+
+           .reviewsFitRangeInput {
+             appearance: none;  // Hides certain features of input styling
+             margin: 0;
+             height: 6px;
+             width: 20px;
+             background-color: #d3d5d7;
+
+             &:checked {
+               background-color: v.$textBlack;
+             }
+           }
+            .reviewsFitRangeLabel {
+              display: none;
+              padding: 5px 8px;
+              position: absolute;
+              top: 20px;
+              //to make sure the text is in the center
+              left: 50%;
+              transform: translateX(-50%);
+              white-space: nowrap;   // to make sure text will never wrap to the next line.
+              color: $lightGrey;
+              font-size: 10px;
+            }
+          &:hover > .reviewsFitRangeLabel {
+            display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .reviewsHeaderBtnContainer {
+      margin: 0 0 0 96px;
+      padding: 0;
+
+      .reviewsHeaderBtn {
+        margin: 16px 0 0 0;
+        padding: 16px;
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        width: 312px;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $lightGrey;
+          border-color: $lightGrey;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // Review Containers
+  .reviewsContainers {
+    display: flex;
+
+    // Review Filter Section
+    .reviewsFilters {
+      margin: 0 22px 0 0;
+      padding: 0;
+      width: 312px;
+
+      // 1) Review Filter - Header
+      .reviewsFiltersHeader {
+        margin: 0 0 16px 0;
+        font-weight: 500;
+      }
+
+      // 2) Review Filter - Search
+      .reviewsFiltersInputContainer {
+        outline: black solid 1px;
+        border-radius: 5px;
+        margin: 0 0 18px 0;
+        padding: 14px 12px 14px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 52px;
+
+        .reviewsFiltersInputBtn {
+          margin: 0 4px 0 14px;
+          padding: 1px 2px;
+          border: none;
+          background-color: transparent;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        &:focus-within {
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.45);
+        }
+      }
+
+      // 3 & 4 Review Filter - Rating & Photo
+      .reviewsFiltersContainer {
+        background-color: v.$bcWhite;
+        margin: 0;
+        padding: 19px 16px;
+
+        .reviewsFiltersRating {
+          margin: 0 0 16px 0;
+          padding: 0 0 16px 0;
+          border-bottom: 1px solid $lightGrey;
+
+          .reviewsFiltersRatingHeader {
+            margin: 0 0 16px;
+          }
+
+          .reviewsFiltersRatingContainers {
+            margin: 0 0 8px;
+            padding: 0 0 0 28px;
+            display: flex;
+            align-items: center;
+            height: 24px;
+            position: relative;
+            cursor: pointer;
+
+            // to hide the default checkbox
+            .reviewsFiltersRatingInput {
+              position: absolute;
+              left: 0;
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            p{
+              margin: 0 0 0 16px;
+              color: $lightGrey;
+              font-size: 14px;
+            }
+
+            // to create a custom checkbox
+            .reviewsFiltersRatingInputCheckmark {
+              margin: 0 8px 0 1px;
+              position: absolute;
+              left: 0;
+              width: 16px;
+              height: 16px;
+              background-color: v.$bcWhite;
+              border: 1px solid $lightGrey;
+
+              // to create the checkmark (hidden when not checked)
+              &::before {
+                content: ' ';
+                width: 6px;
+                height: 12px;
+                display: none;
+                position: absolute;
+                left: 4px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(35deg);
+              }
+            }
+
+            // when the checkbox is checked, add a grey background
+            .reviewsFiltersRatingInput:checked ~ .reviewsFiltersRatingInputCheckmark {
+              background-color: $lightGrey;
+
+              // to show the checkmark when checked
+              &:before {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Review Content Section
+    .reviewsContentsContainers {
+      margin: 0;
+      padding: 0;
+      width: 980px;
+
+      // Review Contents Header
+      .reviewsContentsInfo {
+        margin: 0 0 16px 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+
+        .reviewsContentsResults {
+          margin: 0;
+          padding: 0;
+        }
+
+        .reviewsContentsSort {
+          margin: 0;
+          padding: 0;
+          position: relative;
+
+          .reviewsSortSelect {
+            margin: 0 0 0 2px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 280px;
+
+            .reviewsSortSelectValue {
+              margin: 0 20px 0 0;
+              text-align: right;
+              font-size: 14px;
+            }
+
+            .reviewsSortSelectArrow {
+              position: absolute;
+              right: 6px;
+              top: 5px;
+              // to create arrows
+              border: solid black;
+              border-width: 0 2px 2px 0;
+              padding: 3px;
+              transform: rotate(45deg);
+              transition: transform .3s linear 0s;
+              //transition: transform ease-in-out 0.4s;
+              transform-origin: center;
+
+              &.active {
+                position: absolute;
+                right: 6px;
+                top: 8px;
+                transform: rotate(225deg);  // This rotates the arrow to point upwards when active
+                //transition: transform .3s linear 0s;
+                //transition: transform ease-in-out 0.4s;
+                transform-origin: center;              }
+            }
+          }
+
+          .reviewsSortSelectDropdown {
+            margin: 3px 0 0 0;
+            padding: 0;
+            position: absolute;
+            list-style: none;
+            width: 280px;
+            max-height: 0;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.45);
+            background-color: v.$bcWhite;
+            z-index: 104;
+
+            transform: scaleY(0);
+            opacity: 0;
+            visibility: hidden;
+            overflow-y: hidden;
+            transition: max-height .4s ease-in-out 0s;
+
+            &.active {
+              opacity: 1;
+              visibility: visible;
+              transform: scaleY(1);
+              max-height: 200vh;
+              overflow-y: hidden;
+            }
+
+            li {
+              position: relative;
+              cursor: pointer;
+              display: flex;
+              margin: 0;
+              padding: 0 30px;
+
+              input[type="radio"] {
+                position: absolute;
+                left: 0;
+                opacity: 0;
+              }
+
+              .reviewsSortOption {
+                margin: 0;
+                padding: 22px 10px;
+                width: 100%;
+                height: 65px;
+                cursor: pointer;
+                border-bottom: 1px solid $lightGrey;
+              }
+
+              &:hover {
+                background-color: lightgray;
+                transition: 0.3s ease-out background-color;
+              }
+
+              @supports (transform: scale(1)) {
+                .reviewsSortOption {
+                  position: relative;
+                  overflow: hidden;
+                }
+
+                &::before {
+                  border-radius: 28%;
+                  content: "";
+                  height: 0;
+                  inset: 0;
+                  margin: auto;
+                  padding: 22px;
+                  position: absolute;
+                  transform: scale(0);
+                  transition: 0.3s ease-out;
+                  transition-property: transform, background-color;
+                  width: 100%;
+                }
+              }
+
+              &:hover {
+                background-color: transparent;
+                &::before {
+                  background-color: rgba(211, 211, 211, 0.7);
+                  transform: scale(1.5);
+                }
+              }
+
+              .textBold {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+
+      // Loading Review Card
+      .reviewsListLoadingBtn
+      {
+        margin: 0;
+        padding: 16px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: v.$bcWhite;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: black;
+          color: white;
+        }
+      }
+      .reviewsListViewingShowup {
+        margin: 8px 0 0 0;
+        padding: 0;
+        color: $lightGrey;
+      }
+    }
+  }
+}

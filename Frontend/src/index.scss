@@ -1,0 +1,55 @@
+$bcGreyLight: rgba(224, 224, 224, 0.2);
+$bcOffWhite: #fafafa;
+$bcWhite: #ffffff;
+
+$textBlack: #000000;
+$textGrey: #53565a;
+$textRed: #c8102e;
+$hoverColor: #d22030;
+$underlineColor: #8d9196;
+
+* {
+  margin: 0 auto;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: $bcOffWhite;
+  color: $textBlack;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: 'Calibre', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+}
+// animation
+@mixin redLineAnim($cursor, $width, $duration) {
+  &::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    background: $hoverColor;
+    transition: width $duration ease-in-out;
+  }
+
+  &:hover {
+    cursor: $cursor;
+
+    &::before {
+      width: $width;
+    }
+  }
+}
+
+:export{
+  bcOffWhite: $bcOffWhite;
+}

@@ -1,0 +1,209 @@
+.empty-bag {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 400px;
+}
+
+.empty-bag h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.shop-button {
+  background-color: #d62828;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 11px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #b22222;
+}
+
+.cart-page {
+  display: flex;
+  padding: 25px;
+  max-width: 1440px;
+}
+.cart-page .cart-saved {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cart-page .cart-items, .cart-page .saved-items {
+  width: 100%; /* Ensure it takes full width */
+  display: flex;
+  flex-direction: column;
+}
+.cart-page .saved-items {
+  margin-top: 50px !important;
+}
+.cart-page .notification-box {
+  display: flex;
+  align-items: center;
+  width: 916px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+.cart-page .notification-box i {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.cart-page .notification-box .these-items {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.cart-page .cart-item, .cart-page .saved-items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 916px;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  margin-top: 0;
+  align-items: flex-start;
+}
+.cart-page .cart-item .cart-item-image, .cart-page .cart-item .saved-item-image, .cart-page .saved-items .cart-item-image, .cart-page .saved-items .saved-item-image {
+  width: 200px;
+  height: auto;
+}
+.cart-page .cart-item .cart-item-details, .cart-page .cart-item .saved-item-details, .cart-page .saved-items .cart-item-details, .cart-page .saved-items .saved-item-details {
+  flex: 1;
+  padding-left: 20px;
+}
+.cart-page .cart-item .cart-item-details .cart-item-details, .cart-page .cart-item .cart-item-details .saved-item-details.h2, .cart-page .cart-item .saved-item-details .cart-item-details, .cart-page .cart-item .saved-item-details .saved-item-details.h2, .cart-page .saved-items .cart-item-details .cart-item-details, .cart-page .saved-items .cart-item-details .saved-item-details.h2, .cart-page .saved-items .saved-item-details .cart-item-details, .cart-page .saved-items .saved-item-details .saved-item-details.h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.cart-page .cart-item .cart-item-details .cart-item-details, .cart-page .cart-item .cart-item-details .saved-item-details.p, .cart-page .cart-item .saved-item-details .cart-item-details, .cart-page .cart-item .saved-item-details .saved-item-details.p, .cart-page .saved-items .cart-item-details .cart-item-details, .cart-page .saved-items .cart-item-details .saved-item-details.p, .cart-page .saved-items .saved-item-details .cart-item-details, .cart-page .saved-items .saved-item-details .saved-item-details.p {
+  margin-top: 5px;
+}
+.cart-page .cart-item .cart-item-details .edit-link, .cart-page .cart-item .saved-item-details .edit-link, .cart-page .saved-items .cart-item-details .edit-link, .cart-page .saved-items .saved-item-details .edit-link {
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: underline;
+  font-size: 0.8rem;
+  color: black;
+  text-decoration-color: black;
+  cursor: pointer;
+  transition: color 0.3s, text-decoration-color 0.3s;
+  position: relative;
+}
+.cart-page .cart-item .cart-item-details .edit-link:hover, .cart-page .cart-item .saved-item-details .edit-link:hover, .cart-page .saved-items .cart-item-details .edit-link:hover, .cart-page .saved-items .saved-item-details .edit-link:hover {
+  text-decoration-color: red;
+}
+.cart-page .cart-item .cart-item-details .free, .cart-page .cart-item .saved-item-details .free, .cart-page .saved-items .cart-item-details .free, .cart-page .saved-items .saved-item-details .free {
+  margin-top: 100px;
+}
+.cart-page .cart-item .cart-item-actions, .cart-page .saved-items .cart-item-actions {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.cart-page .cart-item .cart-item-actions .actions-direction, .cart-page .saved-items .cart-item-actions .actions-direction {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+.cart-page .cart-item .cart-item-actions .actions-direction .item-price,
+.cart-page .cart-item .cart-item-actions .actions-direction .quantity-section,
+.cart-page .cart-item .cart-item-actions .actions-direction .total-price, .cart-page .saved-items .cart-item-actions .actions-direction .item-price,
+.cart-page .saved-items .cart-item-actions .actions-direction .quantity-section,
+.cart-page .saved-items .cart-item-actions .actions-direction .total-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-page .cart-item .cart-item-actions .actions-direction .item-price p, .cart-page .cart-item .cart-item-actions .actions-direction .item-price label, .cart-page .cart-item .cart-item-actions .actions-direction .item-price select,
+.cart-page .cart-item .cart-item-actions .actions-direction .quantity-section p,
+.cart-page .cart-item .cart-item-actions .actions-direction .quantity-section label,
+.cart-page .cart-item .cart-item-actions .actions-direction .quantity-section select,
+.cart-page .cart-item .cart-item-actions .actions-direction .total-price p,
+.cart-page .cart-item .cart-item-actions .actions-direction .total-price label,
+.cart-page .cart-item .cart-item-actions .actions-direction .total-price select, .cart-page .saved-items .cart-item-actions .actions-direction .item-price p, .cart-page .saved-items .cart-item-actions .actions-direction .item-price label, .cart-page .saved-items .cart-item-actions .actions-direction .item-price select,
+.cart-page .saved-items .cart-item-actions .actions-direction .quantity-section p,
+.cart-page .saved-items .cart-item-actions .actions-direction .quantity-section label,
+.cart-page .saved-items .cart-item-actions .actions-direction .quantity-section select,
+.cart-page .saved-items .cart-item-actions .actions-direction .total-price p,
+.cart-page .saved-items .cart-item-actions .actions-direction .total-price label,
+.cart-page .saved-items .cart-item-actions .actions-direction .total-price select {
+  margin: 5px 0;
+}
+.cart-page .cart-item .cart-item-actions .p-section, .cart-page .saved-items .cart-item-actions .p-section {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+}
+.cart-page .cart-item .cart-item-actions .p-section .underline, .cart-page .saved-items .cart-item-actions .p-section .underline {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+  text-decoration-color: black;
+  transition: color 0.3s, text-decoration-color 0.3s;
+  position: relative;
+  padding-left: 10px;
+}
+.cart-page .cart-item .cart-item-actions .p-section .underline .remove, .cart-page .saved-items .cart-item-actions .p-section .underline .remove {
+  padding-left: 10px !important;
+  display: block;
+  text-decoration: underline;
+  color: black;
+  text-decoration-color: black;
+  cursor: pointer;
+  transition: color 0.3s, text-decoration-color 0.3s;
+  position: relative;
+}
+.cart-page .cart-item .cart-item-actions .p-section .underline:hover, .cart-page .saved-items .cart-item-actions .p-section .underline:hover {
+  text-decoration-color: red;
+}
+.cart-page .saved-items {
+  margin-top: 200px;
+}
+.cart-page .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.cart-page .modal-content {
+  background: white;
+  border-radius: 0.25rem;
+  width: 1050px;
+  position: relative;
+}
+.cart-page .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=CartComponent.css.map */
